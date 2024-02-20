@@ -1,0 +1,26 @@
+{
+	"name": "@chainpal/utils",
+	"private": false,
+	"version": "0.0.1",
+	"type": "module",
+	"files": [
+		"dist",
+		"index.d.ts"
+	],
+	"main": "./dist/chainpal-utils.umd.cjs",
+	"module": "./dist/chainpal-utils.js",
+	"types": "./index.d.ts",
+	"exports": {
+		"types": "./index.d.ts",
+		"import": "./dist/chainpal-utils.js",
+		"require": "./dist/chainpal-utils.umd.cjs"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build"
+	},
+	"devDependencies": {
+		"typescript": "^5.3.3",
+		"vite": "^5.0.10"
+	}
+}
