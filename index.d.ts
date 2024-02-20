@@ -3,7 +3,7 @@ declare interface Window {
 	[ChainPalJS: string]: any
 }
 
-interface ChainPalJS {
+interface ChainPalType {
 	isApp: boolean
 	isChainpalPc: boolean
 	appLanguage: string
@@ -11,6 +11,5 @@ interface ChainPalJS {
 }
 
 declare module 'chainpal-utils' {
-	export = ChainPalJS
+	export = ChainPalType
 }
-
