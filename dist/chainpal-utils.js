@@ -1,6 +1,6 @@
 var r = Object.defineProperty;
 var h = (n, e, t) => e in n ? r(n, e, { enumerable: !0, configurable: !0, writable: !0, value: t }) : n[e] = t;
-var o = (n, e, t) => (h(n, typeof e != "symbol" ? e + "" : e, t), t);
+var i = (n, e, t) => (h(n, typeof e != "symbol" ? e + "" : e, t), t);
 const c = window.navigator.userAgent, s = c.indexOf("ChainMeet") > -1, l = c.indexOf("ChainPalForPC") > -1, w = s ? c.indexOf("en-US") > -1 ? "en-US" : c.indexOf("zh-CH") > -1 ? "zh-CH" : "" : "", d = (n) => {
   if (s) {
     const e = window.btoa(unescape(window.encodeURIComponent(JSON.stringify(n)))), t = new RegExp("chainmeetShare=[^&]*", "gi"), a = window.location.search.indexOf("chainmeetShare") > -1 ? window.location.search.replace(t, `chainmeetShare=${e}`) : `${window.location.search}${window.location.search ? "&" : "?"}chainmeetShare=${e}`;
@@ -23,13 +23,18 @@ const c = window.navigator.userAgent, s = c.indexOf("ChainMeet") > -1, l = c.ind
   callNativeMethods: p,
   setChainmeetShare: d
 }, Symbol.toStringTag, { value: "Module" }));
-class i {
+class o {
   //  server
 }
-o(i, "isApp", s), //是否是app 包含pc端
-o(i, "isChainpalPc", l), // 是否是PC端， 仅PC端 
-o(i, "appLanguage", w), //获取App环境语言 , app 外部返回空
-o(i, "client", g);
+i(o, "isApp", s), //是否是app 包含pc端
+i(o, "isChainpalPc", l), // 是否是PC端， 仅PC端 
+i(o, "appLanguage", w), //获取App环境语言 , app 外部返回空
+i(o, "client", g);
+window.ChainPal = o;
 export {
-  i as default
+  w as appLanguage,
+  g as client,
+  o as default,
+  s as isApp,
+  l as isChainpalPc
 };
