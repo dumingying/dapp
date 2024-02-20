@@ -17,4 +17,5 @@ export {
 	client
 }
 window.ChainPal = ChainPalJS
-export default ChainPalJS;
+
+export default new ChainPalJS();
