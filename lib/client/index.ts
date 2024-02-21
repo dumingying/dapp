@@ -8,7 +8,7 @@ import type { chainmeetShare } from '../types'
  * @param {*} param0.desc 
  * @param {*} param0.icon 
 */
-export const setChainmeetShare: (chainmeetShare: chainmeetShare) => void = (chainmeetShare: chainmeetShare): void => {
+const setChainmeetShare: (chainmeetShare: chainmeetShare) => void = (chainmeetShare: chainmeetShare): void => {
 	if (isApp) {
 		const shareStr = window.btoa(unescape(window.encodeURIComponent(JSON.stringify(chainmeetShare))))
 		const reg = new RegExp('chainmeetShare=[^&]*', 'gi')
@@ -26,7 +26,7 @@ export const setChainmeetShare: (chainmeetShare: chainmeetShare) => void = (chai
 * @param method {String} 方法名称
 * @param data {Object} 对应参数
 */
-export const callNativeMethods: (method: string, data: object) => void = (method: string, data: object): void => {
+const callNativeMethods: (method: string, data: object) => void = (method: string, data: object): void => {
 	if (isApp) {
 		try {
 			const json = {
@@ -36,4 +36,9 @@ export const callNativeMethods: (method: string, data: object) => void = (method
 			window?.ReactNativeWebView?.postMessage(JSON.stringify(json))
 		} catch (error) { console.error(error) }
 	}
+}
+
+export default {
+	setChainmeetShare,
+	callNativeMethods
 }

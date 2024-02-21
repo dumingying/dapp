@@ -4,7 +4,4 @@
 
 ## 运行
 
-`
-npm install @chainpal/utils
-
-`
+npm install chainpal-utils
