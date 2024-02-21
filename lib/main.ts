@@ -22,4 +22,4 @@ export {
 	callNativeMethods,
 	setChainmeetShare
 };
-export default ChainPal
+// export default ChainPal
