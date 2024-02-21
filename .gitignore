@@ -3,7 +3,7 @@ node_modules/
 package-lock.json
 
 # production
-/build
+/dist
 
 .DS_Store
 */.DS_Store 

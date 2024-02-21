@@ -1,10 +1,6 @@
-interface ChainPalType {
-	isApp: boolean
-	isChainpalPc: boolean
-	appLanguage: string
-	[key: string]: any
-}
+export type appLanguage = string
+export type isApp = boolean
+export type isChainpalPc = boolean
 
-declare module 'chainpal-utils' { }
-export = ChainPalType
-
+export function setChainmeetShare(): void
+export function callNativeMethods(): void
