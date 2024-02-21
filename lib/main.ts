@@ -1,27 +1,25 @@
 
-import * as common from './common'
-import * as client from "./client" // 客户端方法
+import {
+	isApp,
+	isChainpalPc,
+	appLanguage,
+} from './common'
+import { callNativeMethods, setChainmeetShare } from "./client" // 客户端方法
 // import * as server from "./server" // 服务端接口 
-console.log(common)
-console.log(client)
-// const ChainPalJS = {
-// 	isApp,
-// 	isChainpalPc,
-// 	appLanguage,
-// 	client
-// }
-// window.ChainPal = ChainPalJS
-// export default {
-// 	isApp,
-// 	isChainpalPc,
-// 	appLanguage,
-// 	...client
-// };
+const ChainPal = {
+	isApp,
+	isChainpalPc,
+	appLanguage,
+	callNativeMethods,
+	setChainmeetShare
+}
+window.ChainPal = ChainPal
 
-
-// class ChainpalJs {
-// 	public isApp = common.isApp
-// }
-// window.ChainPal = ChainPalJS
-export default { ...common, ...client }
-// module.exports = { common, client }
+export {
+	isApp,
+	isChainpalPc,
+	appLanguage,
+	callNativeMethods,
+	setChainmeetShare
+};
+export default ChainPal
