@@ -1,6 +1,13 @@
-export type appLanguage = string
-export type isApp = boolean
-export type isChainpalPc = boolean
+interface chainmeetShare {
+	title: string
+	desc: string
+	icon: string
+}
 
-export function setChainmeetShare(): void
-export function callNativeMethods(): void
+type appLanguage = string
+type isApp = boolean
+type isChainpalPc = boolean
+
+export { appLanguage, isApp, isChainpalPc }
+export function setChainmeetShare(chainmeetShare: chainmeetShare): void
+export function callNativeMethods(methods: string, data: object): void
