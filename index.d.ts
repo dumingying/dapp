@@ -3,11 +3,11 @@ interface chainmeetShare {
 	desc: string
 	icon: string
 }
+// interface chainpal {
+// 	appLanguage: string
+// 	isApp: boolean
+// 	isChainpalPc: boolean
+// }
 
-type appLanguage = string
-type isApp = boolean
-type isChainpalPc = boolean
-
-export { appLanguage, isApp, isChainpalPc }
 export function setChainmeetShare(chainmeetShare: chainmeetShare): void
 export function callNativeMethods(methods: string, data: object): void
